@@ -1,10 +1,9 @@
 # ------------------------------------------------------------------------------
-#
-#   ___  _     _        _    __  __    _
-#  / _ \| |   | |      / \  |  \/  |  / \
-# | | | | |   | |     / _ \ | |\/| | / _ \
-# | |_| | |___| |___ / ___ \| |  | |/ ___ \
-#  \___/|_____|_____/_/   \_\_|  |_/_/   \_\
+#  _     _     __  __
+# | |   | |   |  \/  |
+# | |   | |   | |\/| |
+# | |___| |___| |  | |
+# |_____|_____|_|  |_|
 #
 #
 #  Updated: jmb (2024-02)
@@ -19,7 +18,7 @@
 # pip install -U langchain-community
 # pip install llama-cpp-python
 #
-# Just download a suitable pre-trained model. 
+# Just download a suitable pre-trained model.
 # I’m using synthia-7b-v2 here with impressive results on general questions formulated in English.
 #
 # https://huggingface.co/TheBloke/SynthIA-7B-v2.0-16k-GGUF
