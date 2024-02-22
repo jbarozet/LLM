@@ -17,9 +17,8 @@ prompt = PromptTemplate(
     template="Give me 5 interesting facts about {topic}?",
 )
 
-chain = LLMChain(llm=llm,
-                 prompt=prompt,
-                 verbose=False)
+chain = LLMChain(llm=llm, prompt=prompt, verbose=False)
 
 # Run the chain only specifying the input variable.
-print(chain.invoke("Paris"))
+output = chain.invoke("Paris")
+print(output['text'])
