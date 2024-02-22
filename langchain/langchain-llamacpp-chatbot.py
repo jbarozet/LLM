@@ -32,32 +32,24 @@ from langchain_community.llms import LlamaCpp
 # enable verbose to debug the LLM's operation
 verbose = False
 
+model_path = "/Users/jbarozet/LLM/llama-2-7b-chat.Q4_K_M.gguf"
+#model_path="/Users/jbarozet/LLM/synthia-7b-v2.0-16k.Q4_K_M.gguf"
+
+# With CPU
 llm = LlamaCpp(
-    model_path="/home/jmb/LLM/synthia-7b-v2.0-16k.Q4_K_M.gguf",
-    # max tokens the model can account for when processing a response
-    # make it large enough for the question and answer
-    n_ctx=4096,
-    # number of layers to offload to the GPU
-    # GPU is not strictly required but it does help
-    n_gpu_layers=32,
-    # number of tokens in the prompt that are fed into the model at a time
-    n_batch=1024,
-    # use half precision for key/value cache; set to True per langchain doc
-    f16_kv=True,
-    verbose=verbose,
+    model_path=model_path,
+    temperature=0.75,
+    max_tokens=2000,
+    top_p=1,
+    verbose=True,  # Verbose is required to pass to the callback manager
 )
+
 
 while True:
     question = input("Ask me a question: ")
-    if question == "stop":
+
+    if question == "/bye":
         sys.exit(1)
-    output = llm(
-        question,
-        max_tokens=4096,
-        temperature=0.2,
-        # nucleus sampling (mass probability index)
-        # controls the cumulative probability of the generated tokens
-        # the higher top_p the more diversity in the output
-        top_p=0.1
-    )
+    output = llm.invoke(question)
+
     print(f"\n{output}")

@@ -1,6 +1,5 @@
 # Examples of LLM scripts
 
-## openchat-cli
 
 A very simple example to provide a ChatGPT-like interface, but running locally on your PC/Mac, and using ollama.
 
