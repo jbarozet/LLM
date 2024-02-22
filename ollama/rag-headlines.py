@@ -14,12 +14,12 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # Embed and store
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import GPT4AllEmbeddings
-from langchain_community.embeddings import OllamaEmbeddings # We can also try Ollama embeddings
+# from langchain_community.embeddings import GPT4AllEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings  # We can also try Ollama embeddings
 
 from langchain_community.llms import Ollama
-from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+# from langchain.callbacks.manager import CallbackManager
+# from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
 # RAG Prompt
 from langchain import hub
@@ -65,8 +65,9 @@ def main():
     len(docs)
 
     # LLM
-    callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
-    llm = Ollama(model="llama2", verbose=True, callback_manager=callback_manager)
+    # callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
+    # llm = Ollama(model="llama2", verbose=True, callback_manager=callback_manager)
+    llm = Ollama(model="llama2")
     print(f"Loaded LLM model {llm.model}")
 
     # RAG prompt
@@ -83,7 +84,7 @@ def main():
     question = f"What are the latest headlines on {url}?"
     result = qa_chain.invoke({"query": question})
 
-    print(result)
+    print("\n\n" + result['result'])
 
 
 if __name__ == "__main__":
