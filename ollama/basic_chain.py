@@ -1,6 +1,6 @@
-# Description: 
+# Description:
 #    This is a basic example of how to use OLLAMA as an LLM in Python
-#    and use it as a RAG
+#    and building a chain
 #
 # Usage:
 #    run: python3 basic_chain.py --url https://techcrunch.com/

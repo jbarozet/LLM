@@ -5,23 +5,27 @@
 # | |___| |___| |  | |
 # |_____|_____|_|  |_|
 #
-#
 #  Updated: jmb (2024-02)
 #
 # NOTES
-# I just import two libraries: sys and langchain.llms.
-# Importing LLMs from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0.
-# Please import from langchain-community instead
-# The LlamaCpp module itself requires the installation of dependencies (pip install llama-cpp-python).
+#   I just import two libraries: sys and langchain.llms.
+#   Importing LLMs from langchain is deprecated.
+#   Importing from langchain will no longer be supported as of langchain==0.2.0.
+#   Please import from langchain-community instead
+#   The LlamaCpp module itself requires the installation of dependencies (pip install llama-cpp-python)
 #
-# Not used anymore: pip install langchain
-# pip install -U langchain-community
-# pip install llama-cpp-python
+# INSTALL
+#   Not used anymore: pip install langchain
+#   pip install -U langchain-community
+#   pip install llama-cpp-python
 #
 # Just download a suitable pre-trained model.
 # I’m using synthia-7b-v2 here with impressive results on general questions formulated in English.
+# Also tried with llama2
 #
-# https://huggingface.co/TheBloke/SynthIA-7B-v2.0-16k-GGUF
+# Hugging Face LLMs:
+#   https://huggingface.co/TheBloke/SynthIA-7B-v2.0-16k-GGUF
+#   https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF
 #
 # ------------------------------------------------------------------------------
 

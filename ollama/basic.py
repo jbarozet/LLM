@@ -1,5 +1,6 @@
 # Description:
 #    This is a basic example of how to use OLLAMA as an LLM in Python
+#    Using langchain library
 #
 # Usage:
 #    run: python3 basic

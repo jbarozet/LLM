@@ -1,6 +1,8 @@
 # Description: run a chatbot using Ollama and gradio
-# Usage: python chatbot1.py
-# This will display a URL that you can use to chat
+#
+# Usage:
+#   python chatbot1.py
+#   This will display a URL that you can use to chat
 #
 # Last Updated: 2024-02-22
 

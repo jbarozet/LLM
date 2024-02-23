@@ -1,8 +1,10 @@
 # Description: run a chatbot using Ollama and streamlit
-# Usage: streamlit run chatbot2.py
+#
+# Usage:
+#   streamlit run chatbot2.py
 #
 # Last Updated: 2024-02-22
-# 
+#
 from langchain_community.llms import Ollama
 from langchain_community.document_loaders import WebBaseLoader
 # from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
