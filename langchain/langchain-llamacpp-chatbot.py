@@ -33,7 +33,7 @@ from langchain_community.llms import LlamaCpp
 verbose = False
 
 model_path = "/Users/jbarozet/LLM/llama-2-7b-chat.Q4_K_M.gguf"
-#model_path="/Users/jbarozet/LLM/synthia-7b-v2.0-16k.Q4_K_M.gguf"
+# model_path="/Users/jbarozet/LLM/synthia-7b-v2.0-16k.Q4_K_M.gguf"
 
 # With CPU
 llm = LlamaCpp(
@@ -43,7 +43,6 @@ llm = LlamaCpp(
     top_p=1,
     verbose=True,  # Verbose is required to pass to the callback manager
 )
-
 
 while True:
     question = input("Ask me a question: ")
