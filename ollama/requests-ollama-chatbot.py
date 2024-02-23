@@ -1,15 +1,12 @@
-# ------------------------------------------------------------------------------
+# Description:
+#   run a chatbot using Ollama and gradio
+#   using requests library (so, no langchain, no transformers library used)
 #
-#   ___  _     _        _    __  __    _
-#  / _ \| |   | |      / \  |  \/  |  / \
-# | | | | |   | |     / _ \ | |\/| | / _ \
-# | |_| | |___| |___ / ___ \| |  | |/ ___ \
-#  \___/|_____|_____/_/   \_\_|  |_/_/   \_\
+# Usage:
+#   python chatbot1.py
+#   This will display a URL that you can use to chat
 #
-#
-#  Updated: jmb (2024-02)
-#
-# ------------------------------------------------------------------------------
+# Last Updated: 2024-02-22
 
 import json
 
