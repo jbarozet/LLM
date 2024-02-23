@@ -1,7 +1,8 @@
 # Examples of LLM scripts
 
+A collection of very simple examples to provide a ChatGPT-like interface, but running locally on your PC/Mac, and using ollama, langchains, transformers.
 
-A very simple example to provide a ChatGPT-like interface, but running locally on your PC/Mac, and using ollama.
+## Ollama
 
 Start ollama server:
 
