@@ -27,8 +27,3 @@ Run ollama with mistral model:
 ollama run mistral
 ```
 
-Then run the script, which will launch a web interface:
-
-```console
-python3 openchat.py
-```
