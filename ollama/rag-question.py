@@ -1,9 +1,12 @@
-# Description: how to use Ollama with langchain and RAG.
-# Ask question about a document or web page
-# Usage:
-# python3 rag-question.py
+# Description:
+#    This is a basic example of how to use OLLAMA as an LLM in Python
+#    USe RAG (load CCO page) and ask question
 #
-# Last Updated: 2024-02-24
+# Usage:
+#    run: python3 rag-question.py
+#
+# Last updated: 2024-02-22
+#
 
 from langchain_community.llms import Ollama
 from langchain_community.document_loaders import WebBaseLoader

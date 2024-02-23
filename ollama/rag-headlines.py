@@ -1,10 +1,12 @@
-# Description: how to use Ollama with langchain and RAG.
-# Get headlines from a news site.
+# Description:
+#    This is a basic example of how to use OLLAMA as an LLM in Python
+#    USe RAG and get headlines from news site
 #
 # Usage:
-# python3 rag-headlines --url https://techcrunch.com/
+#    run: python3 rag-headlines.py --url https://techcrunch.com/
 #
-# Last Updated: 2024-02-24
+# Last updated: 2024-02-22
+#
 
 # Load web page
 import argparse

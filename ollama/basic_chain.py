@@ -1,5 +1,10 @@
-# Description: This is a basic example of how to use OLLAMA as an LLM in Python and use it as a RAG
-# run: python3 rag.py --url https://techcrunch.com/
+# Description: 
+#    This is a basic example of how to use OLLAMA as an LLM in Python
+#    and use it as a RAG
+#
+# Usage:
+#    run: python3 basic_chain.py --url https://techcrunch.com/
+#
 # Last updated: 2024-02-22
 #
 from langchain_community.llms import Ollama

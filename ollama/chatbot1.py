@@ -1,4 +1,4 @@
-# Description: run a chatbot using Ollama and local model
+# Description: run a chatbot using Ollama and gradio
 # Usage: python chatbot1.py
 # This will display a URL that you can use to chat
 #
@@ -21,7 +21,7 @@ callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 
 # Load a model using ollama
 
-llm = Ollama(model="llama2", model_path=model_path, temperature=temperature, max_tokens=max_tokens, callback_manager=callback_manager)
+llm = Ollama(model="mistral", callback_manager=callback_manager)
 
 print(f"Loaded LLM model {llm.model}")
 
@@ -31,6 +31,7 @@ def generate_response(prompt):
     output = llm.invoke(full_prompt)
     return output
 
+
 # Load graphical interface
 iface = gr.Interface(
     fn=generate_response,
@@ -39,3 +40,4 @@ iface = gr.Interface(
 )
 
 iface.launch()
+

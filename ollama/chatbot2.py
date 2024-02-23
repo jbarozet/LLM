@@ -1,4 +1,4 @@
-# Description: run a chatbot using Ollama and local model
+# Description: run a chatbot using Ollama and streamlit
 # Usage: streamlit run chatbot2.py
 #
 # Last Updated: 2024-02-22
