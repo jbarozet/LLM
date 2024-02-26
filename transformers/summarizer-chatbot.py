@@ -15,9 +15,8 @@
 # pip install transformers (Hugging Face library)
 # pip install 'transformers[torch]' (deep learning library )
 # ------------------------------------------------------------------------------
-import sys
-import json
-from transformers import pipeline, Conversation
+
+from transformers import pipeline
 import gradio as gr
 
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")

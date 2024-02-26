@@ -1,10 +1,13 @@
-import sys
-import json
-from transformers import pipeline, Conversation
+# Description:
+#   Hugging Face transformers library
+#   Summarizing text
+#
+# Last updated: 2024-02-26
+#
 
-# --- [ SUMMARIZATION ]
+from transformers import pipeline
 
-summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+# --- [ TEXT ]
 
 text = """
 Hugging Face is an AI company that has become a major hub for open-source machine learning. 
@@ -17,20 +20,25 @@ The power of these resources is that they are community generated, which leverag
 While these make building powerful ML projects more accessible than before, there is another key element of the Hugging Face ecosystem—their Transformers library.
 """
 
+# --- [ PRINT OUTPUT ]
+
+def print_output(text):
+    for item in text:
+        label = item["label"]
+        score = item["score"]
+        print(f"Label: {label} - Score:", score)
+
+
+# --- [ TEXT SUMMARIZATION ]
+
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+
 summarized_text = summarizer(text, min_length=5, max_length=140)[0]['summary_text']
-print(f"Summarized Text: {summarized_text}")
+print(f"Summarized Text: \n{summarized_text}\n\n")
 
 # --- [ TEXT CLASSIFICATION ]
 
 classifier = pipeline(task="text-classification", model="SamLowe/roberta-base-go_emotions", top_k=None)
 output = classifier(summarized_text)
-
-# Extract values
 text_classification = output[0]
-
-# Print values
-for item in text_classification:
-    label = item["label"]
-    score = item["score"]
-    print(f"Label: {label} - Score:", score)
-
+print_output(text_classification)
