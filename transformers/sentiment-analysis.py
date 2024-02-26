@@ -1,7 +1,7 @@
 # Description:
 #   Hugging Face transformers library
 #   Sentiment analysis
-#   automated process of tagging data according to their sentiment, 
+#   automated process of tagging data according to their sentiment,
 #   such as positive, negative and neutral.
 #
 # Last updated: 2024-02-26
@@ -55,4 +55,3 @@ print_output(4, output)
 classifier = pipeline(task="text-classification", model="SamLowe/roberta-base-go_emotions", top_k=None)
 output = classifier(text_list[0])
 print_output(5, output[0])
-
