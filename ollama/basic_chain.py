@@ -3,9 +3,9 @@
 #    and building a chain
 #
 # Usage:
-#    run: python3 basic_chain.py --url https://techcrunch.com/
+#    run: python3 basic_chain.py
 #
-# Last updated: 2024-02-22
+# Last updated: 2024-02-26
 #
 from langchain_community.llms import Ollama
 # from langchain.callbacks.manager import CallbackManager

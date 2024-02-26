@@ -3,9 +3,11 @@
 #    Using langchain library
 #
 # Usage:
-#    run: python3 basic
+#   Download and install ollama
+#   Pull llama2: ollama pull llama2
+#   run: python3 basic.py
 #
-# Last updated: 2024-02-22
+# Last updated: 2024-02-26
 #
 from langchain_community.llms import Ollama
 from langchain.callbacks.manager import CallbackManager

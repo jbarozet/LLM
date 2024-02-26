@@ -3,7 +3,7 @@
 #   using requests library (so, no langchain, no transformers library used)
 #
 # Usage:
-#   python chatbot1.py
+#   python requests-ollama-chatbot.py
 #   This will display a URL that you can use to chat
 #
 # Last Updated: 2024-02-22

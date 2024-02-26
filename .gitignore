@@ -20,4 +20,5 @@ crash.log
 .vscode/
 *.code-workspace
 .idea
-
+#--- Init file with API keys
+langchain/init.sh

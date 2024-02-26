@@ -26,6 +26,8 @@ ollama = Ollama(base_url='http://localhost:11434', model="llama2")
 # On my machine, I also needed to install bs4 to get that to work, so run pip install bs4.
 
 # url = https://www.gutenberg.org/files/1727/1727-h/1727-h.htm"
+
+# Using a SD-WAN Overview Paper for quick test
 url = "https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/sdwan-xe-gs-book/system-overview.html"
 
 loader = WebBaseLoader(url)

@@ -5,22 +5,18 @@
 # | |___| |___| |  | |
 # |_____|_____|_|  |_|
 #
-#  Updated: jmb (2024-02)
+#  Updated: jmb (2024-02-26)
 #
-# NOTES
-#   I just import two libraries: sys and langchain.llms.
-#   Importing LLMs from langchain is deprecated.
-#   Importing from langchain will no longer be supported as of langchain==0.2.0.
-#   Please import from langchain-community instead
-#   The LlamaCpp module itself requires the installation of dependencies (pip install llama-cpp-python)
+# DESCRIPTION
+#   Very simple chatbot using llama-cpp
+#   and a model downloaded from Hugging Face
 #
 # INSTALL
-#   Not used anymore: pip install langchain
-#   pip install -U langchain-community
-#   pip install llama-cpp-python
+#   poetry add langchain-community
+#   poetry add llama-cpp-python
 #
 # Just download a suitable pre-trained model.
-# I’m using synthia-7b-v2 here with impressive results on general questions formulated in English.
+# I’m using synthia-7b-v2 (or llama2) here with impressive results on general questions formulated in English.
 # Also tried with llama2
 #
 # Hugging Face LLMs:
