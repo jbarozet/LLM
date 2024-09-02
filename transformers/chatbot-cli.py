@@ -4,7 +4,6 @@
 # Last updated: 2024-02-26
 
 from transformers import pipeline, Conversation
-# from ctransformers AutoModelForCausalLM, AutoTokenizer
 
 chatbot = pipeline(model="facebook/blenderbot-400M-distill")
 
