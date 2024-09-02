@@ -1,17 +1,18 @@
-# Description: run a chatbot using Ollama and gradio
+# Description:
+#   run a chatbot using Ollama, langchain and gradio
+#   using langchain ollama library
 #
 # Usage:
 #   python chatbot1.py
 #   This will display a URL that you can use to chat
 #
-# Last Updated: 2024-02-22
-
-from langchain_community.llms import Ollama
-from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+# Last Updated: 2024-09-02
 
 import gradio as gr
+from langchain_community.llms import Ollama
 
+from langchain.callbacks.manager import CallbackManager
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
 # Conversation
 conversation_history = []
@@ -26,6 +27,7 @@ callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 llm = Ollama(model="mistral", callback_manager=callback_manager)
 
 print(f"Loaded LLM model {llm.model}")
+
 
 def generate_response(prompt):
     conversation_history.append(prompt)
@@ -42,4 +44,3 @@ iface = gr.Interface(
 )
 
 iface.launch()
-

@@ -11,9 +11,8 @@
 #   Very simple chatbot using llama-cpp
 #   and a model downloaded from Hugging Face
 #
-# INSTALL
-#   poetry add langchain-community
-#   poetry add llama-cpp-python
+# INSTALL PACKAGES
+#   langchain-community, llama-cpp-python
 #
 # Just download a suitable pre-trained model.
 # I’m using synthia-7b-v2 (or llama2) here with impressive results on general questions formulated in English.
@@ -26,6 +25,7 @@
 # ------------------------------------------------------------------------------
 
 import sys
+
 # from langchain.llms import LlamaCpp
 from langchain_community.llms import LlamaCpp
 

@@ -1,6 +1,9 @@
-import sys
-from langchain_community.llms import CTransformers
+#   GGUF and GGML are file formats used for storing models for inference,
+#   especially in the context of language models like GPT (Generative Pre-trained Transformer).
 
+import sys
+
+from langchain_community.llms import CTransformers
 
 llm = CTransformers(
     model="TheBloke/CodeLlama-7B-Python-GGUF",

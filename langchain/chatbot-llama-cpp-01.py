@@ -1,11 +1,15 @@
+#   GGUF and GGML are file formats used for storing models for inference,
+#   especially in the context of language models like GPT (Generative Pre-trained Transformer).
+
 import sys
+
 from langchain.llms import LlamaCpp
 
 # enable verbose to debug the LLM's operation
 verbose = False
 
 llm = LlamaCpp(
-    model_path="/home/chris/MODELS/synthia-7b-v2.0-16k.Q4_K_M.gguf",
+    model_path="/home/jmb/LLM/synthia-7b-v2.0-16k.Q4_K_M.gguf",
     # max tokens the model can account for when processing a response
     # make it large enough for the question and answer
     n_ctx=4096,
@@ -30,6 +34,6 @@ while True:
         # nucleus sampling (mass probability index)
         # controls the cumulative probability of the generated tokens
         # the higher top_p the more diversity in the output
-        top_p=0.1
+        top_p=0.1,
     )
     print(f"\n{output}")
